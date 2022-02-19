@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  * @author txbias.eth
  * @dev Uses ERC721 non-fungible token standard. Effort was made to reduce gas cost, however, OZ ERC721Enumerable is a gas-heavy contract.
  */
-contract GenesisNFT is ERC721Enumerable, Ownable {
+contract NFT is ERC721Enumerable, Ownable {
     string public _baseTokenURI;
 
     bool public saleIsActive;
