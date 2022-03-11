@@ -1,7 +1,5 @@
 # NFT template V1
 
-Work in progress...
-
 This is a basic NFT (ERC721) template.
 
 ## Use cases
