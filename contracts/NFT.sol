@@ -16,12 +16,12 @@ contract NFT is ERC721Enumerable, Ownable {
 
     uint256 public reserved = 10;
 
-    uint256 public constant MINT_PRICE = 0.008 ether;
+    uint256 public constant MINT_PRICE = 0.08 ether;
 
    /**
     * @dev Intialize contract with ipfs URI
     */
-    constructor(string memory _initBaseURI) ERC721("Genesis NFTs", "gWAGMI") {
+    constructor(string memory _initBaseURI) ERC721("Genesis NFTs", "NFT") {
         setBaseURI(_initBaseURI);
     }
 
@@ -100,7 +100,7 @@ contract NFT is ERC721Enumerable, Ownable {
     * @dev Withdraw all funds in the contract
     */
     function withdraw() public onlyOwner {
-        address _owner = owner();
-        payable(_owner).transfer(address(this).balance);
+        (bool itWorked, ) = msg.sender.call{value: address(this).balance}("");
+        require(itWorked, "Withdraw failed");
     }
 }
