@@ -18,6 +18,7 @@ Some great testing resources:
 - https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/test/token/ERC721/ERC721.behavior.js
 - https://hardhat.org/tutorial/testing-contracts.html
 - https://dev.to/jacobedawson/import-test-a-popular-nft-smart-contract-with-hardhat-ethers-12i5
+- https://hardhat.org/tutorial/testing-contracts.html
 
 ## On gas optimization
 
